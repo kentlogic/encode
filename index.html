@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>enCode - KentLogic</title>
+  <link rel="stylesheet" href="bulma.min.css" />
+  <link rel="icon" href="github.svg" />
+</head>
+
+<body>
+  <div class="section is-centered columns is-half ">
+    <article class="media box">
+      <div class="media-left">
+        <figure class="image is-64x64">
+          <img src="code.svg" alt="Image" />
+        </figure>
+      </div>
+
+      <!--Div for the middle area-->
+      <div class="content">
+        <!--Top header part-->
+        <strong class="subtitle"><span class="code-outline">en</span><span class="code-box">Code</span></strong>
+        <br />
+        <small class="subtitle-5">Turn your message into a secret code.</small>
+        <hr />
+        <!--End Top header part-->
+
+        <!--Div for displaying the decoded message-->
+        <div id="message-decode" hidden>
+          <div class="field">
+            <div class="control">
+              <label class="label">Decoded message:</label>
+              <i class=" " height="200" id="message-text" class="button"></i>
+            </div>
+          </div>
+          <hr />
+          <div class="field is-grouped">
+            <div class="control">
+              <a href="./index.html" class="button is-small is-outlined is-info">
+                <span class="icon">
+                  <img src="code.svg" alt="Image" />
+                </span>
+                <span>Create a secret message</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!--EndDiv for displaying the decoded message-->
+
+        <!--Div for composing messages-->
+        <div id="message-compose">
+          <form>
+            <div class="field">
+              <div class="control">
+                <input id="message-input" required class="input" type="text" placeholder="Enter a secret message">
+              </div>
+            </div>
+            <hr />
+
+            <div class="field is-grouped">
+              <div class="control is-expanded">
+                <button class="button is-small is-fullwidth is-outlined is-info">Encode message</button>
+              </div>
+              <div class="control">
+                <a href="https://github.com/kentlogic/encode" target="_blank"
+                  class="button is-small is-outlined is-dark">
+                  <span class="icon">
+                    <img src="github.svg" alt="Image" />
+                  </span>
+                  <span>View on GitHub</span>
+                </a>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!--End Div for composing messages-->
+
+        <!--Div for displaying the encoded message URL-->
+        <div id="link-form" hidden>
+          <div class="field">
+            <div class="control">
+              <label class="label">Share the link below:</label>
+              <input id="link-input" class="input" type="text">
+            </div>
+          </div>
+          <p id="success-tag" class="tag is-success is-hidden">Copied to clipboard!</p>
+          <hr />
+          <div class="field is-grouped">
+            <div class="control is-expanded">
+              <button id="copy-btn" class="button is-small is-fullwidth is-outlined is-info">Copy to
+                clipboard</button>
+            </div>
+            <div class="control">
+              <a href="./index.html" class="button is-small is-outlined is-info">
+                <span class="icon">
+                  <img src="code.svg" alt="Image" />
+                </span>
+                <span>Create a secret message</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!--end for displaying the encoded message URL-->
+      </div>
+      <!--End Div for the middle area-->
+    </article>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
